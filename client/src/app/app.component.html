@@ -1,0 +1,33 @@
+<div style="display: flex">
+    <div class="block">
+        <label>
+            Введите свое выражение:
+            <br>
+            <input type="text"
+                   [(ngModel)]="expr">
+        </label>
+    </div>
+    <div class="block">
+        Range
+        <br>
+        <div style="display: flex">
+            <div>
+                <label>
+                    <input type="number"
+                           placeholder="нижняя граница"
+                    [(ngModel)]="start">
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="number"
+                           placeholder="верхняя граница"
+                           [(ngModel)]="end">
+                </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="calculate()">Посчитать</button>
+    </div>
+</div>
