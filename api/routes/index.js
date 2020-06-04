@@ -21,8 +21,10 @@ function calc(data) {
     console.log(data, start, end);
     const result = math.compile(expr);
     const arr = [];
-    for (let i = start; i <= end; i++) {
-        arr.push({x: i, y: result.evaluate({ x: i })});
+    const step = data.width / (end - start);
+    console.log(step);
+    for (let i = start; i <= end; i = i + 1 / step) {
+        arr.push({ x: i, y: result.evaluate({ x: i }) });
     }
     return arr;
 }

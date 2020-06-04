@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707c5ad3-593f-40dd-86cc-236c7efa5819" name="Default Changelist" comment="" />
+    <list default="true" id="707c5ad3-593f-40dd-86cc-236c7efa5819" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1cohjeOJRnYjnUoblWtbTyBoaT5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -22,6 +31,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\tamaz\WebstormProjects\calc\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="C:\Users\tamaz\WebstormProjects\calc\client\node_modules\typescript\lib" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -34,16 +44,26 @@
       <option name="presentableId" value="Default" />
       <updated>1591200990360</updated>
       <workItem from="1591200992241" duration="257000" />
+      <workItem from="1591243177838" duration="6601000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/client/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="856" y="288" key="Github.ShareDialog" timestamp="1591201024286">
       <screen x="0" y="0" width="1966" height="789" />
     </state>
     <state x="856" y="288" key="Github.ShareDialog/0.0.1966.789@0.0.1966.789" timestamp="1591201024286" />
+    <state x="705" y="136" width="540" height="524" key="StructurePopup" timestamp="1591243685564">
+      <screen x="0" y="0" width="1966" height="789" />
+    </state>
+    <state x="705" y="136" width="540" height="524" key="StructurePopup/0.0.1966.789@0.0.1966.789" timestamp="1591243685564" />
   </component>
 </project>

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CalcService } from './services/calc.service';
-import * as d3 from 'd3';
 
 @Component({
     selector: 'app-root',
@@ -13,28 +12,47 @@ export class AppComponent {
     start: number;
     end: number;
 
+    @ViewChild('canvas', { static: true }) canvas: HTMLCanvasElement;
+
     constructor(private calc: CalcService) {
     }
 
     calculate() {
-        // console.log(d3);
-        this.calc.calc({ expr: this.expr, start: this.start, end: this.end }, e => this.plot(e));
+        this.calc.calc({
+            expr: this.expr,
+            start: this.start,
+            end: this.end,
+            width: 500,
+            height: 500
+        }, e => this.plot(e, this.end - this.start));
     }
 
-    plot(data: []) {
-        const svg = d3.select('#line').append('svg').attr('width', 800).attr('height', 200);
-
-        const lineFunc = d3.line()
-            .x((d) => {
-                return d.x;
-            })
-            .y((d) => {
-                return d.y;
-            });
-
-        svg.append('path')
-            .attr('d', lineFunc(data))
-            .attr('stroke', 'black')
-            .attr('fill', 'none');
+    plot(data: [{ x: number, y: number }], range) {
+        console.log('get data', data);
+        const cnv: HTMLCanvasElement = <HTMLCanvasElement>document.getElementById('plot');
+        const height = 500;
+        const width = 500;
+        const scaleX = width / range;
+        const scaleY = height / range;
+        console.log('scale:', scaleX, scaleY);
+        cnv.width = width;
+        cnv.height = height;
+        const startX = Math.round(width / 2);
+        const startY = Math.round(height / 2);
+        const ctx = cnv.getContext('2d');
+        ctx.clearRect(0, 0, width, height);
+        ctx.fillStyle = '#000';
+        ctx.beginPath();
+        ctx.moveTo(data[0].x * scaleX + startX, startY - data[0].y * scaleY);
+        data.forEach(e => {
+            console.log(e.x * scaleX + startX, startY - e.y * scaleY);
+            ctx.lineTo(e.x * scaleX + startX, startY - e.y * scaleY);
+            // ctx.moveTo(e.x * scaleX, (start - e.y) * scaleY);
+        });
+        // ctx.closePath();
+        // ctx.fill();
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 1;
+        ctx.stroke();
     }
 }
